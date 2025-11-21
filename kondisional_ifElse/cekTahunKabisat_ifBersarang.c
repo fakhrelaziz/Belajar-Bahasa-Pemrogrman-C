@@ -13,7 +13,7 @@ int main(){
           printf("tahun %d bukan kabisat", tahun);
      }
      */
-    /* if (tahun % 4 == 0){
+     if (tahun % 4 == 0){
           if (tahun % 100 == 0)
           {
                if (tahun % 400 == 0)
@@ -25,12 +25,12 @@ int main(){
                
           
      }else {printf("Tahun %d adalah BUKAN tahun Kabisat", tahun);}
-     */
-
+     
+     /*
      printf("%d %s tahun kabisat\n", 
            tahun, ((tahun % 4 == 0 && tahun % 100 != 0) || tahun % 400 == 0)
            ? "adalah" :"BUKAN");
-           
+     */      
      return 0;
 
 }
