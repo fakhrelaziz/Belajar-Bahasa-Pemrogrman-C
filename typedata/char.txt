@@ -1,0 +1,4 @@
+/*kalau berupa char gunakan perbandingan ini 
+contoh jika ingin membandingkan: (operator == '+')
+ kalau string jika ingin membandingkan kita menggunakan fungsi bawaan c yaitu string.h 
+ contoh perbandingan: (strcmp(input, "Masa"))
