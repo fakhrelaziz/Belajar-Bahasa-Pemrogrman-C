@@ -1,1 +1,0 @@
-yVar = EASY;

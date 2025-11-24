@@ -26,7 +26,7 @@ int main(){
           
      }else {printf("Tahun %d adalah BUKAN tahun Kabisat", tahun);}
      
-     /*
+     /*MENGUNAKAN TERNARY lOGIKA
      printf("%d %s tahun kabisat\n", 
            tahun, ((tahun % 4 == 0 && tahun % 100 != 0) || tahun % 400 == 0)
            ? "adalah" :"BUKAN");

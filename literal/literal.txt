@@ -1,0 +1,5 @@
+literal adalah cara merepresentasikan suatu angka, string, float, karakter 
+tanpa mendeklarasikan variabel dan tipe data
+bisa digunakan ketika suatu nilai itu bersifat konstan atau tetap
+ printf("%d\n", 10);
+ printf("%s\n", "Halo");

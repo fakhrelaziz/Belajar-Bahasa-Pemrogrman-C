@@ -1,15 +1,18 @@
 #include<stdio.h>
+
+//menggunakan macro constan
 #define FALSE 0
 #define NOL 0
 #define SATU 1
 #define pi 3.1415
-int main ()
-{/* Kamus */
+int main (){
+  //menggunaksn const
      const int maks=3;
      const float param =2.5;
      const char cc = 65 ;
      const char cA = 'A' ;
- /* Algoritma */
+
+     
      printf ("PI  = %.2f\n", pi);
      printf ("NOL  = %d\n", NOL);
      printf ("SATU  = %d\n", SATU);

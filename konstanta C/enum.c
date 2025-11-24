@@ -8,7 +8,7 @@ enum Level {
   
 int main() {
   enum Level myVar;
-/*INI KALAU PAKAI STRING  
+/*INI KALAU PAKAI FUNGSI  STRING  
   char input[20];
   printf("=====Pilih Mode====\n 0. EASY\n 1. MEDIUM\n 2. HARD\n===================\n");
   scanf("%s", &input);
