@@ -1,15 +1,18 @@
 #include <stdio.h>
+
 int main(){
-char b;
+int b;
 char c;
  
 /* Algoritma */
 printf ("hello\n");
-printf("masukan : ");
-scanf("%c", &b);
-printf ("aidhasid %c\n", b);
-printf("baca 1 karakter saja : ");
-scanf("%d", &c); /*ketikkan angka 65 */
-printf ("kdmlsnca %d", c);
+
+printf("Masukan Angka: ");
+scanf("%d", &b);
+printf("\n");
+printf("Masukkan karakter: ");
+scanf(" %c", &c); //ketika ingin meminta user input dua kali tambahken "spasi sebelum %c"
+//tpi hanya untuk input tipe int dan char barengan
+printf ("Angka: %d dan huruf: %c ", b, c);
 return 0;
 }

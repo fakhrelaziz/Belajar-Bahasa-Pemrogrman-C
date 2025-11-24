@@ -17,9 +17,9 @@ int main(){
      printf("Inputkan Tahun: ");
      scanf("%d", &tahun);
      
-     if (cekTahunKabisat(tahun)){//Jika 1 maka jalankan
+     if (cekTahunKabisat(tahun)){//Jika 1 atau fungsi tadi bernilai true maka jalankan
           printf("%d adalah Tahun Kabisat", tahun);
-     }else { //Jika 0 maka jalankan
+     }else { //Jika 0 (false) maka jalankan
           printf("%d BUKAN Tahun Kabisat", tahun);
      }
 
