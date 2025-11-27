@@ -9,7 +9,7 @@ int main(void) {
     int temp = angka;
     
     while (temp != 0) {
-        temp /= 10;  // karen operator div(/) angk selalu mengahasilkan bilangan bulat conth: 1234,5 jadinnya 1234 , jadi buang digit terakhir
+        temp /= 10;  // karena operator div(/) angk selalu mengahasilkan bilangan bulat conth: 1234,5 jadinnya 1234 , jadi buang digit terakhir
         count++;
     }
     
