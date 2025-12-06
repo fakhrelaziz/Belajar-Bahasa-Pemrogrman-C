@@ -1,12 +1,18 @@
 #include <stdio.h>
-#include <stdbool.h>
 
+void printEnter(){
+     printf("\n========== TARIK TUNAI ==========\n");
+                printf("\n===========================\n");
+                printf("Masukan angka 0 untuk BATAL\n");
+                printf("===========================\n");
+                printf("\nJumlah yang ingin ditarik: Rp. ");
+                getchar();
+}
 int main(void){
     double saldo = 1000000;  // Saldo awal 1 juta
     int pilihan;
     double jumlah;
-    bool running = true;
-    int keMenu;
+    int running = 1;
     
     while(running){
         printf("\n========== ATM SIMULATOR ==========\n");
@@ -21,25 +27,17 @@ int main(void){
         printf("Pilih menu: ");
         scanf("%d", &pilihan);
         
-        switch (pilihan) {
-            case 1:
+        if (pilihan == 1) {
+        
                 printf("\n-------- CEK SALDO --------\n");
                 printf("Saldo Anda: Rp %.2f\n", saldo);
                 printf("---------------------------\n\n");
                 printf("Ketik:\n99. kembali ke Menu Utama\n");
                 printf("===========================\n: ");
-                scanf("%d", &keMenu);
-                if(keMenu == 99){break;}
-                break;
 
-            case 2:
-                printf("\n========== TARIK TUNAI ==========\n");
-                printf("\n===========================\n");
-                printf("Masukan angka 0 untuk BATAL\n");
-                printf("===========================\n");
-                printf("\nJumlah yang ingin ditarik: Rp. ");
-                scanf("%lf", &jumlah);
-                if((int)jumlah == 0){break;}
+            }else if (pilihan == 2){
+                
+                printEnter();
                 
                 if (jumlah <= 0) {
                     printf("ERROR: Jumlah harus lebih dari 0!\n");
@@ -54,14 +52,9 @@ int main(void){
                     printf("Jumlah ditarik: Rp %.2f\n", jumlah);
                     printf("Saldo tersisa: Rp %.2f\n", saldo);
                 }
-                printf("===========================\n");
-                printf("Ketik:\n99. kembali ke Menu Utama\n");
-                printf("===========================\n: ");
-                scanf("%d", &keMenu);
-                if(keMenu == 99){break;}
-                break;
-            
-            case 3:
+                
+            }
+        else if(pilihan == 3){
                 printf("\n--- SETOR TUNAI ---\n");
                 printf("Jumlah yang ingin disetor: Rp ");
                 scanf("%lf", &jumlah);
@@ -76,9 +69,9 @@ int main(void){
                     printf("Jumlah disetor: Rp %.2f\n", jumlah);
                     printf("Saldo baru: Rp %.2f\n", saldo);
                 }
-                break;
+            }
             
-            case 4:
+        else if(pilihan == 4){
                 printf("\n--- TRANSFER ---\n");
                 printf("Nomor rekening tujuan: ");
                 int rekening;
@@ -86,7 +79,7 @@ int main(void){
                 
                 printf("Jumlah transfer: Rp ");
                 scanf("%lf", &jumlah);
-                
+            
                 if (jumlah <= 0) {
                     printf("ERROR: Jumlah harus lebih dari 0!\n");
                 } else if (jumlah > saldo) {
@@ -106,16 +99,14 @@ int main(void){
                         printf("Saldo tersisa: Rp %.2f\n", saldo);
                     }
                 }
-                break;
+            }
             
-            case 5:
+        else if(pilihan == 5){
                 printf("\n--- KELUAR ---\n");
                 printf("Terima kasih telah menggunakan ATM kami!\n");
                 printf("Saldo akhir: Rp %.2f\n", saldo);
-                running = false;
-                break;
-            
-            default:
+                running = 0;
+        }else {
                 printf("\nERROR: Pilihan tidak valid!\n");
                 printf("Silakan pilih 1-5\n");
                 break;
